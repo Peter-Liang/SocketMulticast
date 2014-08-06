@@ -23,7 +23,7 @@ try:
 
     # Send data to the multicast group
     print('sending "%s"' % message)
-    sent = sock.sendto(message, multicast_group)
+    sent = sock.sendto(message.encode('utf-8'), multicast_group)
 
     # Look for responses from all recipients
     while True:
